@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breno Lopes Mafra - Task 1</title>
+  <!-- React library -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <!-- React DOM library -->
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <!-- Babel standalone to compile JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type = "text/babel">
+    //Import the DOM
+
+    //Task begins
+    console.log("I am here!")
+
+    //1. create a property for navigation bar
+    function NavBar(props){
+      return (
+              <ul>
+                <li>This is the navigation bar </li>
+              </ul>
+      )
+    }
+
+    //2. let use a variable named musicData with 3 components
+    const musicData = [
+        {title : 'song 1'},
+        {title : 'song 2'},
+        {title : 'song 3'},
+    ]
+    console.log("variable: ", musicData)
+
+
+    //Define Music component
+    function Music(props){
+
+        return <ul>
+            <li>{musicData[0].title}</li>
+            <li>{musicData[1].title}</li>
+            <li>{musicData[2].title}</li>
+        </ul>
+    }
+    //3. create an app component and display Music data
+    const App = () => {
+      return(
+              <div>
+                <h1>My music playlist</h1>
+                <Music> data = {musicData}</Music>
+                  <updateForm></updateForm>
+              </div>
+      )
+    }
+
+    //4. create and update the form
+    class updateForm extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {value: ''}
+            this.handleChange = this.handleChange.bind(this)
+            this.handleChange = this.handleChange.bind(this)
+        }
+
+        handleChange(event) {
+            this.setState({value: event.target.value})
+        }
+
+        handleSubmit(event) {
+            alert("Name is submitted" + this.state.value)
+        }
+
+        //html for form in react
+        render() {
+            return (
+                <div>
+                    <form onSubmit={this.handleSubmit}></form>
+                    <label>Name:
+                        <input type="text" value={this.state.value} onChange="{this.handleChange"/>
+                    </label>
+                    <input type="submit" value="SUBMIT"/>
+                    <span>Data entered is: {this.state.value} </span>
+                </div>
+
+            )
+        }
+    }
+       //call this data
+    ReactDOM.render(<App />, document.getElementById("root"))
+
+
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

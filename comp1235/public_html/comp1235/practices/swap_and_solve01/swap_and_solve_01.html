@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap and Solve 01 - CEO Joey and CTO Breno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .nav {
+            background-color: blue;
+            padding: 10px 0;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            margin: 0 5px;
+        }
+
+        .header {
+            background-color: #0288d1;
+            color: deepskyblue;
+            padding: 20px;
+            text-align: center;
+            align-content: center;
+            font-size: 30px;
+        }
+
+        .gallery {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .gallery img {
+            margin: 10px;
+            width: 300px; /* Simplified size */
+            height: 300px; /* Simplified size */
+        }
+
+        #loginPopup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .showLoginBtn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Components</a>
+    <a href="#">Accessories</a>
+    <a href="#">Contact Us</a>
+</div>
+
+<div class="header">
+    <h1>TechTrove</h1>
+</div>
+
+<div class="gallery">
+    <img src="assets/img/product01.jpg" alt="Product 1">
+    <img src="assets/img/product02.jpg" alt="Product 2">
+</div>
+
+<div id="loginPopup">
+    <h2>Log In</h2>
+    Account Number: <label for="accountNumber"></label><input type="text" id="accountNumber"><br>
+    <button onclick="login()">Enter</button>
+</div>
+
+<button class="showLoginBtn" onclick="showLoginPopup()">Log In</button>
+
+<script>
+    function showLoginPopup() {
+        document.getElementById('loginPopup').style.display = 'block';
+    }
+
+    function login() {
+        const accountNumber = document.getElementById('accountNumber').value;
+        if (accountNumber.length === 5) {
+            alert('Successfully logged in!');
+            document.getElementById('loginPopup').style.display = 'none';
+        } else {
+            alert('Invalid account number. Please enter a 5-digit number.');
+        }
+    }
+</script>
+
+</body>
+</html>

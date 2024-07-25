@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breno Lopes Mafra - Task 1</title>
+    <script>
+    let a = "Hi";
+    document.write(a);
+    let print = function (startnum, endnum){
+        let num1 = startnum;
+        for( ;num1<= endnum; startnum){
+            num1 += startnum + ',';
+        }
+         return num1
+    }
+    document.write("<br>", print(12,21));
+    let n1 = prompt("Enter the starting number: ");
+    let n2 = prompt("Enter the ending number: ");
+    document.write("<br>Printing numbers from ", n1);
+    document.write("to ", n2);
+    n2 = n2 + 1;
+    document.write("<br>", print(n1,n2));
+
+    const sum1 = (p1,p2) => {
+        return p1 + p2;
+    };
+    document.write("<br>Sum is: ", print(sum1(2,5)));
+
+    const printName = function (name){
+        return name;
+    }
+    function greet(name, callback){
+        return "hello " + callback(name)
+    }
+    document.write(greet("Breno", printName));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

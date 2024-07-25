@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breno Lopes Mafra - Task 4</title>
+    <script>
+        let Pattern_literal = new RegExp('/pop/',1);
+        let match_string = "lollipop";
+        let result1 = Pattern_literal.test(match_string);
+        document.write("<br> Was that pattern match?"+ result1);
+        let Pattern_phone1 = /\(\d{3}\)\d{3}-\d{4}/;
+        let match_phone1= "(416)555-1234";
+        let result2= Pattern_phone.exec(match_phone1);
+        document.write("<br> Was that phone pattern match?"+ result2);
+        let Pattern_email1 = /^[a-zA-Z.]*@[a-zA-Z]+\.com$/;
+        let email1="abc@gmail.com";
+        let result3= Pattern_email1(match(email1));
+        document.write("<br> Was that email pattern match?"+ result3);
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

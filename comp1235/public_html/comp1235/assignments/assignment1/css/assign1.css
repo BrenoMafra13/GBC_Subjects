@@ -1,0 +1,156 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+/* Basic body page styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Teko', sans-serif; /* Sets main font */
+    color: #ff8000;
+    background-color: #918989;
+}
+
+/* Header and footer styling */
+header, footer {
+    font-family: 'Teko', sans-serif;
+    background-color: #fcde4b;
+    color: #000000;
+}
+
+/* Main section styling */
+main {
+    font-family: 'Teko', sans-serif;
+    color: #ff8000;
+}
+
+/* Common styling for header, main content, and footer */
+header, main, footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 960px; /* Maximum width */
+    margin: auto; /* Centers horizontally */
+}
+
+/* Specific header styling */
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center; /* Vertically aligns items */
+}
+
+/* Navigation bar styling */
+nav {
+    height: 100px;
+    width: 960px;
+    box-sizing: border-box;
+    border: 2px solid #fcde4b;
+}
+
+/* Navigation links styling */
+#nav-links {
+    list-style-type: none; /* Removes list markers */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 0;
+}
+
+#home {
+    margin-right: auto; /* Pushes all other items to the right */
+}
+
+#nav-links li {
+    padding: 0 20px; /* Spacing between links */
+}
+
+#nav-links li a {
+    color: #000000;
+}
+
+/* Course grid styling */
+#course-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    grid-template-rows: 100px auto; /* Rows height */
+    gap: 15px 10px; /* Gap between grid items */
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#page_title {
+    grid-column: 1 / -1; /* Title spans all columns */
+    font-family: 'Anton', sans-serif;
+}
+
+/* Each course item styling */
+.course_item {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns, second is larger */
+    grid-template-rows: 1fr 1fr 4fr; /* Three rows, last is largest */
+    grid-template-areas:
+        "image number"
+        "image title"
+        "image description";
+    gap: 10px; /* Gap between items */
+    padding: 10px;
+    background-color: #ababab;
+}
+
+/* Specific areas within a course item */
+.course_image { grid-area: image; }
+.course_number { grid-area: number; font-family: 'Anton', sans-serif; }
+.course_title { grid-area: title; font-family: 'Anton', sans-serif; }
+.course_description { grid-area: description; }
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center; /* Vertically aligns items */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between; /* Evenly distributes items */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+footer ul li a {
+    color: #000000;
+}
+
+/* For smaller screens */
+@media (max-width: 640px) {
+    #course-grid {
+        grid-template-columns: 1fr 1fr; /* When it is two columns */
+    }
+
+    nav {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    footer ul {
+        flex-direction: column; /* Items in a column */
+        align-items: center;
+    }
+
+    footer ul li:not(:last-child) {
+        margin-bottom: 10px; /* Space between items */
+    }
+}
+
+@media (max-width: 400px) {
+    #course-grid {
+        grid-template-columns: 1fr; /* When it is one column */
+    }
+}

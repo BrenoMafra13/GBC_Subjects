@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Bliss - Renewed Style with Brazilian Books</title>
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+<h1 id="welcome">Welcome to Book Bliss, </h1>
+<div class="filter-buttons">
+  <button onclick="filterBooks('all')">All</button>
+  <button onclick="filterBooks('Fiction')">Fiction</button>
+  <button onclick="filterBooks('Biography')">Biography</button>
+</div>
+
+<div class="recommendation" data-genre="Fiction" data-author="Machado de Assis">
+  <img class="book-img" src="assets/image1.jpeg" alt="Cover of the book Dom Casmurro">
+  <div class="book-details">
+    <p><strong class="book-title">Dom Casmurro</strong> - by Machado de Assis</p>
+    <p>Genre: Fiction</p>
+    <p>Summary: A deep dive into the mind of Bento Santiago, the narrator who questions the fidelity of his wife, Capitu, leading to timeless debates about truth and jealousy.</p>
+    <button onclick="alert('Thank you for buying Dom Casmurro, ' + userName + '!')">Buy Book</button>
+  </div>
+</div>
+
+<div class="recommendation" data-genre="Biography" data-author="Paulo Coelho">
+  <img class="book-img" src="assets/image2.jpg" alt="Cover of the book The Alchemist">
+  <div class="book-details">
+    <p><strong class="book-title">The Alchemist</strong> - by Paulo Coelho</p>
+    <p>Genre: Fiction</p>
+    <p>Summary: This philosophical book tells the story of Santiago, an Andalusian shepherd boy who dreams of finding a worldly treasure located in the pyramids of Egypt.</p>
+    <button onclick="alert('Thank you for buying The Alchemist, ' + userName + '!')">Buy Book</button>
+  </div>
+</div>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

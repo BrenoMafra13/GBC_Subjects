@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breno Lopes Mafra - Task 2</title>
+
+    <script>
+        let username = "Petter.Griffin";
+
+        let firstname = username.substring(0, 5);
+        document.write("Firstname is : " + firstname);
+
+        let lastname = username.substring(6);
+        document.write("<br>Lastname is " + lastname);
+
+        let username1 = "Petter.Griffin"
+        let dotIndex = username1.indexOf(".");
+        let firstname1 = username1.substring(0, dotIndex);
+        let lastname1 = username1.substring(dotIndex);
+        document.write("<br>Firstname is : ", firstname1);
+        document.write("<br>Lastname is : ", lastname1);
+
+        let result = username.toUpperCase();
+        document.write("<br>Uppercase is : ", result);
+
+
+        function getFirstname(user) {
+            let dotIndex = user.indexOf(".");
+            if (dotIndex === -1) {
+                document.write("Sorry! dot(.) is not found.");
+            }
+
+            let firstNameLocal = user.substring(0, dotIndex);
+            return firstNameLocal;
+        }
+
+        let firstname2 = GetFirstname("laura.smith");
+        document.write("<br> firstname with function :" + firstname2);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
